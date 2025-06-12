@@ -1,35 +1,225 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>KYLER THURIN</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pimp Master Barack - Coin Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      body {
-        height: 100vh;
-        background-color: black;
-        color: white;
-      }
+        /* Custom font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark background similar to image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem; /* Add some padding for smaller screens */
+            box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+        }
 
-      #text {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+        /* Custom style for the card-like address fields */
+        .address-card {
+            background-color: #2d3748; /* Slightly lighter dark for cards */
+            border-radius: 1rem; /* Rounded corners */
+            padding: 1rem 1.5rem; /* Padding inside cards */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .address-card:hover {
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        .copy-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #cbd5e0; /* Light gray for icon */
+            transition: color 0.2s ease-in-out;
+            padding: 0.5rem; /* Make clickable area larger */
+            border-radius: 0.5rem; /* Rounded button */
+        }
+
+        .copy-button:hover {
+            color: #ffffff; /* White on hover */
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive adjustments for layout */
+        @media (max-width: 640px) {
+            .address-card {
+                flex-direction: column; /* Stack items on small screens */
+                align-items: flex-start;
+                padding: 1rem;
+            }
+            .address-text {
+                word-break: break-all; /* Break long words */
+                margin-bottom: 0.5rem; /* Space between text and button */
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div id="text">
-      <h1 id="headline" style="display: block;">KYLER THURIN</h1>
-      <div id="strap" class="text-muted text-center" style="display:block;">
-        <a href="/cdn-cgi/l/email-protection#09646c49657c626c276e6e"><span class="__cf_email__" data-cfemail="b5d8d0f5d9c0ded09bd2d2">[email&#160;protected]</span></a>
-        <br />
-        <a href="kylerthurin07@gmail.com">Contact Me</a>
-      </div>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <div class="container mx-auto p-4 flex flex-col items-center justify-center min-h-screen text-center">
+
+        <!-- Profile Picture -->
+        <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 shadow-xl">
+            <img src="https://placehold.co/160x160/333333/ffffff?text=Profile" alt="Profile Picture" class="w-full h-full object-cover">
+            <!-- Fallback for image loading error -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/1200px-President_Barack_Obama.jpg" alt="Profile Picture" class="w-full h-full object-cover absolute top-0 left-0" onerror="this.onerror=null;this.src='https://placehold.co/160x160/333333/ffffff?text=Profile';">
+        </div>
+
+        <!-- Name -->
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-2" style="font-weight: 800;">Pimp Master Barack</h1>
+
+        <!-- Slogan -->
+        <p class="text-lg md:text-xl text-gray-400 mb-8 md:mb-12">Gift me coins bitch ass</p>
+
+        <!-- Cryptocurrency Addresses Section -->
+        <div class="w-full max-w-md">
+
+            <!-- Bitcoin Address -->
+            <div class="address-card">
+                <div class="flex items-center">
+                    <span class="text-yellow-500 text-2xl mr-3">₿</span> <!-- Bitcoin icon -->
+                    <span id="bitcoinAddress" class="address-text text-base md:text-lg text-gray-300">19hxB2Pybt99BG6nZmfgqGq7VwQc3mXh</span>
+                </div>
+                <button class="copy-button" onclick="copyToClipboard('bitcoinAddress', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-2M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2.5a2.5 2.5 0 012.5 2.5v10a2.5 2.5 0 01-2.5 2.5h-10A2.5 2.5 0 015 17.5v-10A2.5 2.5 0 017.5 5H12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Ethereum Address -->
+            <div class="address-card">
+                <div class="flex items-center">
+                    <span class="text-gray-400 text-2xl mr-3">Ξ</span> <!-- Ethereum icon -->
+                    <span id="ethereumAddress" class="address-text text-base md:text-lg text-gray-300">1A1zP1eP5QGefi2DMPTFtLLsC79Q4XkP</span>
+                </div>
+                <button class="copy-button" onclick="copyToClipboard('ethereumAddress', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-2M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2.5a2.5 2.5 0 012.5 2.5v10a2.5 2.5 0 01-2.5 2.5h-10A2.5 2.5 0 015 17.5v-10A2.5 2.5 0 017.5 5H12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Litecoin Address -->
+            <div class="address-card">
+                <div class="flex items-center">
+                    <span class="text-blue-400 text-2xl mr-3">Ł</span> <!-- Litecoin icon -->
+                    <span id="litecoinAddress" class="address-text text-base md:text-lg text-gray-300">bc1q344l9r00njujcqrhqwbcg42728r328n</span>
+                </div>
+                <button class="copy-button" onclick="copyToClipboard('litecoinAddress', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-2M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2.5a2.5 2.5 0 012.5 2.5v10a2.5 2.5 0 01-2.5 2.5h-10A2.5 2.5 0 015 17.5v-10A2.5 2.5 0 017.5 5H12"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
     </div>
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+
+    <!-- Message box for copy feedback -->
+    <div id="messageBox" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-green-500 text-white py-2 px-4 rounded-lg shadow-xl opacity-0 transition-opacity duration-300" style="z-index: 1000;"></div>
+
+    <script>
+        /**
+         * Copies the text content of a specified element to the clipboard.
+         * Shows a temporary message box to indicate success.
+         * @param {string} elementId - The ID of the HTML element whose text content will be copied.
+         * @param {HTMLElement} buttonElement - The button element that was clicked.
+         */
+        function copyToClipboard(elementId, buttonElement) {
+            const textToCopy = document.getElementById(elementId).textContent;
+            let success = false;
+
+            // Attempt to use the modern Clipboard API first
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(textToCopy)
+                    .then(() => {
+                        showMessage("Copied!", "success");
+                        success = true;
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy using clipboard.writeText: ', err);
+                        // Fallback to execCommand if clipboard.writeText fails
+                        fallbackCopyTextToClipboard(textToCopy);
+                        showMessage("Copied!", "success"); // Assume fallback worked
+                        success = true;
+                    });
+            } else {
+                // Fallback for older browsers or restricted environments
+                fallbackCopyTextToClipboard(textToCopy);
+                showMessage("Copied!", "success"); // Assume fallback worked
+                success = true;
+            }
+
+            // Optional: Briefly change button icon/text on success
+            if (success) {
+                // You could change the icon here temporarily if desired
+            }
+        }
+
+        /**
+         * Fallback function to copy text to clipboard using document.execCommand.
+         * @param {string} text - The text to copy.
+         */
+        function fallbackCopyTextToClipboard(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";  // Avoid scrolling to bottom
+            textArea.style.left = "-9999px"; // Hide it from view
+            textArea.style.top = "0"; // Position it for execCommand
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                const successful = document.execCommand('copy');
+                const msg = successful ? 'successful' : 'unsuccessful';
+                console.log('Fallback copying text command was ' + msg);
+            } catch (err) {
+                console.error('Fallback: Oops, unable to copy', err);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        /**
+         * Displays a temporary message box.
+         * @param {string} message - The message to display.
+         * @param {string} type - The type of message (e.g., 'success', 'error').
+         */
+        function showMessage(message, type) {
+            const messageBox = document.getElementById('messageBox');
+            messageBox.textContent = message;
+            messageBox.className = `fixed bottom-5 left-1/2 -translate-x-1/2 py-2 px-4 rounded-lg shadow-xl opacity-0 transition-opacity duration-300`;
+
+            // Set background color based on type
+            if (type === 'success') {
+                messageBox.classList.add('bg-green-500', 'text-white');
+            } else if (type === 'error') {
+                messageBox.classList.add('bg-red-500', 'text-white');
+            }
+
+            // Show the message box
+            messageBox.classList.remove('opacity-0');
+            messageBox.classList.add('opacity-100');
+
+            // Hide the message box after 2 seconds
+            setTimeout(() => {
+                messageBox.classList.remove('opacity-100');
+                messageBox.classList.add('opacity-0');
+            }, 2000);
+        }
+    </script>
+</body>
 </html>
